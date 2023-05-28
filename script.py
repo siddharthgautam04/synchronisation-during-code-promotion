@@ -75,7 +75,8 @@ def get_changed_files(owner, repo, commit_id):
     return []
 
 if __name__ == '__main__':
-    github_token = os.environ['GITHUB_TOKEN']
+ #   github_token = os.environ['GITHUB_TOKEN']
+    github_token = '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'
     owner = "Project-OSRM"
     repo = "osrm-backend"
     commit_id = "0ca913132acea46e0c56e4665af50d68f53eec68"
