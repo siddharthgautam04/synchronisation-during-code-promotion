@@ -67,7 +67,7 @@ if __name__ == '__main__':
     owner = "Project-OSRM"
     repo = "osrm-backend"
     pull_id = "6632"
-    github_token="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"
+    github_token="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"
     # file_content = github_read_file(owner, repo, file_path, github_token)
     # if file_content:
     #     print(f"File content:\n{file_content}")

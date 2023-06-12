@@ -3,7 +3,8 @@ import os
 import requests
 import base64
 
-commit_api_url = "https://api.github.com/repos/Project-OSRM/osrm-backend/commits/0ca913132acea46e0c56e4665af50d68f53eec68"
+#commit_api_url = "https://api.github.com/repos/{owner}/{repo}}/commits/{commit_id}".
+#commit_api_url=var1
 compare_api_url = "https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}"
 
 def github_read_file(username, repository_name, file_path, github_token=None):
@@ -76,13 +77,15 @@ def get_changed_files(owner, repo, commit_id):
 
 if __name__ == '__main__':
  #   github_token = os.environ['GITHUB_TOKEN']
-    github_token = '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'
-    owner = "Project-OSRM"
-    repo = "osrm-backend"
-    commit_id = "0ca913132acea46e0c56e4665af50d68f53eec68"
+    github_token = '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'
+    owner = "matplotlib"
+    repo = "matplotlib"
+    commit_id = "7603301bc7b74ff261470be6467319d7d292ce7c"
     # file_content = github_read_file(owner, repo, file_path, github_token)
     # if file_content:
     #     print(f"File content:\n{file_content}")
+    var1 = "https://api.github.com/repos/"+owner+"/"+repo+"/commits/"+commit_id
+    commit_api_url=var1
     changed_files = get_changed_files(owner, repo, commit_id)
     print("Changed files:")
     for file in changed_files:
@@ -91,4 +94,6 @@ if __name__ == '__main__':
         # print("Content:")
         # print(file['content'])
         # print()
-        
+
+
+
